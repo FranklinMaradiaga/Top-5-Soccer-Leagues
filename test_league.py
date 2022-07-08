@@ -77,9 +77,9 @@ class TestLeague(unittest.TestCase):
             url = self.get_url(value, random.randint(2001, 2022))
             league = League(url)
             test = League(url)
-            
+
             self.assertEqual(
-                league.get_team_positions(), 
+                league.get_team_positions(),
                 test.get_team_positions()
             )
 
