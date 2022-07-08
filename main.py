@@ -21,8 +21,8 @@ def get_url(league, season):
         "La Liga": "esp.1",
         "Premier League": "eng.1",
     }
-
-    return f"https://api-football-standings.azharimm.site/leagues/{d[league]}/standings?season={season}&sort=asc"
+    url = f"https://api-football-standings.azharimm.site/leagues/{d[league]}/standings?season={season}&sort=asc"
+    return url
 
 
 def main():
