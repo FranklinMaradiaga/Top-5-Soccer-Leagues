@@ -21,9 +21,9 @@ def get_url(league, season):
         "La Liga": "esp.1",
         "Premier League": "eng.1",
     }
-    # f1 = f"https://api-football-standings.azharimm.site/leagues/{d[league]}/"
-    # f2 = "standings?season={season}&sort=asc"
-    return f"https://api-football-standings.azharimm.site/leagues/{d[league]}/standings?season={season}&sort=asc"
+    f1 = f"https://api-football-standings.azharimm.site/leagues/{d[league]}/"
+    f2 = f"standings?season={season}&sort=asc"
+    return f1 + f2
 
 
 def main():
@@ -41,12 +41,13 @@ def main():
         print("\n\n", my_league.df)
 
         user = input(
-            "\n\nWould you like to information about another league (yes/no)?\n"
+            "\n\nWould you like to get information about another league (yes/no)?\n"
         )
 
         if user.lower() == "yes":
             continue
         else:
+            print("\nHope to see you again soon!\n")
             break
 
 
