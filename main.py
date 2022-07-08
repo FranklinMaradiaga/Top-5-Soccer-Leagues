@@ -33,10 +33,10 @@ def main():
 
     while True:
 
-        le = input("\nWhat Soccer league are you interested in?\n")
+        league = input("\nWhat Soccer league are you interested in?\n")
         s = input("\nWhat season are you interested in?\n")
 
-        my_league = League(get_url(l, s))
+        my_league = League(get_url(league, s))
         print("\n\n", my_league.df)
 
         user = input(
