@@ -45,7 +45,7 @@ def main():
         print("\n\n", my_league.df)
 
         user = input(
-            "\n\nWould you like to get information about another"\
+            "\n\nWould you like to get information about another"
             " league (yes/no)?\n"
         )
 
