@@ -9,8 +9,8 @@ La Liga. -> Spain League
 Premier League. -> England League
 '''
 
-
 def get_url(league, season):
+    
     league = league.lower().title()
 
     d = {
@@ -23,14 +23,23 @@ def get_url(league, season):
 
     return f'https://api-football-standings.azharimm.site/leagues/{d[league]}/standings?season={season}&sort=asc'
 
+def main():
+    print("\nWe will give you all the information you want from"\
+    " the Top 5 Leagues in Europe & the World!")
 
-print("\nWe will give you all the information you want from"\
-      "the Top 5 Leagues in Europe & the World!\n")
+    while True:
 
-l = input("What Soccer league are you interested in?\n")
-s = input("What season are you interested in?\n")
+        l = input("\nWhat Soccer league are you interested in?\n")
+        s = input("\nWhat season are you interested in?\n")
 
-my_league = League(get_url(l, s))
+        my_league = League(get_url(l, s))
+        print("\n\n", my_league.df)
 
-# team = input("What is your favorite team?")
-print(my_league.df)
+        user = input("\n\nWould you like to information about another league (yes/no)?\n")
+
+        if user.lower() == "yes":
+	        continue
+        else:
+	        break
+
+main()
