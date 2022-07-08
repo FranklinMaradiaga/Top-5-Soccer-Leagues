@@ -33,7 +33,7 @@ def main():
 
     while True:
 
-        l = input("\nWhat Soccer league are you interested in?\n")
+        le = input("\nWhat Soccer league are you interested in?\n")
         s = input("\nWhat season are you interested in?\n")
 
         my_league = League(get_url(l, s))
