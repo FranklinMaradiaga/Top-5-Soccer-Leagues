@@ -15,13 +15,15 @@ class TestLeague(unittest.TestCase):
             "Premier League": "eng.1",
         }
         url = (
-            f"https://api-football-standings.azharimm.site/leagues/{d[league]}"
-            f"/standings?season={season}&sort=asc"
+            f"https://api-football-standings.azharimm.site/leagues/{d[league]}/"
+            f"standings?season={season}&sort=asc"
         )
         return url
 
     def get_teams(self):
-        return ["Ligue 1", "Serie A", "Bundesliga", "La Liga", "Premier League"]
+        return [
+            "Ligue 1", "Serie A", "Bundesliga", "La Liga", "Premier League"
+        ]
 
     def test_get_team_names(self):
         teams = self.get_teams()
