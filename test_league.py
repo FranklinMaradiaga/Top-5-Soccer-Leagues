@@ -15,8 +15,8 @@ class TestLeague(unittest.TestCase):
             "Premier League": "eng.1",
         }
         url = (
-            f"https://api-football-standings.azharimm.site/leagues/{d[league]}/"
-            f"standings?season={season}&sort=asc"
+            f"https://api-football-standings.azharimm.site/leagues/{d[league]}"
+            f"/standings?season={season}&sort=asc"
         )
         return url
 
