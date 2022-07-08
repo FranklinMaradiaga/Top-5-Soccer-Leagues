@@ -14,8 +14,11 @@ class TestLeague(unittest.TestCase):
             "La Liga": "esp.1",
             "Premier League": "eng.1",
         }
-
-        return f"https://api-football-standings.azharimm.site/leagues/{d[league]}/standings?season={season}&sort=asc"
+        url = (
+            f"https://api-football-standings.azharimm.site/leagues/{d[league]}/"
+            f"standings?season={season}&sort=asc"
+        )
+        return url
 
     def get_teams(self):
         return ["Ligue 1", "Serie A", "Bundesliga", "La Liga", "Premier League"]
