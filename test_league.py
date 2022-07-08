@@ -77,7 +77,11 @@ class TestLeague(unittest.TestCase):
             url = self.get_url(value, random.randint(2001, 2022))
             league = League(url)
             test = League(url)
-            self.assertEqual(league.get_team_positions(), test.get_team_positions())
+            
+            self.assertEqual(
+                league.get_team_positions(), 
+                test.get_team_positions()
+            )
 
     def test_create_dict(self):
         teams = self.get_teams()
