@@ -21,9 +21,11 @@ def get_url(league, season):
         "La Liga": "esp.1",
         "Premier League": "eng.1",
     }
-    f1 = f"https://api-football-standings.azharimm.site/leagues/{d[league]}/"
-    f2 = f"standings?season={season}&sort=asc"
-    return f1 + f2
+
+    url = f"https://api-football-standings.azharimm.site/leagues/{d[league]}/" \
+          f"standings?season={season}&sort=asc"
+          
+    return url
 
 
 def main():
@@ -41,7 +43,8 @@ def main():
         print("\n\n", my_league.df)
 
         user = input(
-            "\n\nWould you like to get information about another league (yes/no)?\n"
+            "\n\nWould you like to get information about another"\
+            "league (yes/no)?\n"
         )
 
         if user.lower() == "yes":
