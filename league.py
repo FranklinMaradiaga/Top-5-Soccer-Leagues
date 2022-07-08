@@ -66,14 +66,7 @@ class League:
             points.append(data['stats'][6]['displayValue'])
 
         return points
-
-
-    def set_team_positions(self):
-        response = self.league_json
-
-        for data in response['data']['standings']:
-            self.positions.append(data['stats'][8]['displayValue'])
-
+        
 
     def get_team_positions(self):
         response = self.league_json
