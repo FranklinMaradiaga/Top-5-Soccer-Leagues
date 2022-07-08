@@ -1,31 +1,35 @@
 from league import League
 
-'''
+"""
 Top 5 Leagues In Europe:
 Ligue 1. -> France League
 Serie A. -> Italian League
 Bundesliga. -> German League
 La Liga. -> Spain League
 Premier League. -> England League
-'''
+"""
+
 
 def get_url(league, season):
-    
+
     league = league.lower().title()
 
     d = {
-        'Ligue 1': 'fra.1',
-        'Serie A': 'ita.1',
-        'Bundesliga': 'ger.1',
-        'La Liga': 'esp.1',
-        'Premier League': 'eng.1'
+        "Ligue 1": "fra.1",
+        "Serie A": "ita.1",
+        "Bundesliga": "ger.1",
+        "La Liga": "esp.1",
+        "Premier League": "eng.1",
     }
 
-    return f'https://api-football-standings.azharimm.site/leagues/{d[league]}/standings?season={season}&sort=asc'
+    return f"https://api-football-standings.azharimm.site/leagues/{d[league]}/standings?season={season}&sort=asc"
+
 
 def main():
-    print("\nWe will give you all the information you want from"\
-    " the Top 5 Leagues in Europe & the World!")
+    print(
+        "\nWe will give you all the information you want from"
+        " the Top 5 Leagues in Europe & the World!"
+    )
 
     while True:
 
@@ -35,11 +39,14 @@ def main():
         my_league = League(get_url(l, s))
         print("\n\n", my_league.df)
 
-        user = input("\n\nWould you like to information about another league (yes/no)?\n")
+        user = input(
+            "\n\nWould you like to information about another league (yes/no)?\n"
+        )
 
         if user.lower() == "yes":
-	        continue
+            continue
         else:
-	        break
+            break
+
 
 main()
